@@ -97,8 +97,8 @@ public:
 int main() {
     Parent H ("Homer", 36, 'M');
     Parent M ("Marge", 34, 'F');
-    Child ("Lisa", 12, 'F', "Marge", "Homer");
-    Child ("Bart", 10, 'M', "Marge", "Homer");
-    Child ("Maggie", 3, 'F', "Marge", "Homer");
+    Child L ("Lisa", 12, 'F', "Marge", "Homer");
+    Child B ("Bart", 10, 'M', "Marge", "Homer");
+    Child Mag("Maggie", 3, 'F', "Marge", "Homer");
 
 }
