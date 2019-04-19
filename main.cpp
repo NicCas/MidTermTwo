@@ -31,8 +31,39 @@ public:
 
 };
 
-class Parent
+class Parent : public Human
 {
+    std::vector <std::string> children;
+
+    Parent ();
+
+public:
+    Parent (std::string n, int a, int s) : Human (n, a, s)
+    {
+        std::cout<< "Parent constructed\n";
+    }
+
+    void printChild(){
+        for (int i  = 0; i < children.size(); i++)
+        {
+            std::cout << children[i] << ", ";
+        }
+        std::cout << "\n";
+    }
+
+    /////////////
+    void setChild(&Child name){
+        for (int a = 0; a < 3; a++)
+        {
+            children.insert ()
+        }
+    }
+
+    //////
+    void setChildAllowence(int allowance, Child)
+    {
+
+    }
 
 };
 
@@ -42,8 +73,6 @@ class Child : public Human
     std::string momName;
     std::string dadName;
     int allowance;
-
-    //default constructor needed
 
 public:
     Child (std::string n, int a, int s, std::string momName, std::string dadName) : Human (n, a, s), allowance (0)
