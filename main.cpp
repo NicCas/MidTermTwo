@@ -1,11 +1,9 @@
 #include <iostream>
 #include <cstdio>
-#include <string>
 
 // Base class
 class Human
 {
-private:
     // Declare base class var
     std::string _name;
     int _age;
@@ -33,11 +31,35 @@ public:
 
 };
 
-class Parent {
+class Parent
+{
 
 };
 
-class Child {
+class Child : public Human
+{
+    friend class Parent;
+    std::string momName;
+    std::string dadName;
+    int allowance;
+
+    //default constructor needed
+
+public:
+    Child (std::string n, int a, int s, std::string momName, std::string dadName) : Human (n, a, s), allowance (0)
+    {
+        std::cout << "Child is constructed\n";
+    }
+
+    int getAllowence () const
+    {
+        std::cout << "The allowance is $ " << allowance << "\n";
+    }
+
+    void printParent()
+    {
+        std::cout<< "Mother: \n"<< momName << "Father: " << dadName << "\n";
+    }
 
 };
 
