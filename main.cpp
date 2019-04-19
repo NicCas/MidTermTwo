@@ -16,12 +16,12 @@ protected:
     // Protected constructor for name age sex
     Human (const std::string & n, const int & a, const char & s) : _name(n), _age(a), _sex(s)
     {
-        std::cout<<"Human Constructed\n";
+        std::cout<<"Human Constructed" << std::endl;
     }
 
     ~Human()
     {
-        std::cout<< "Destructing\n";
+        std::cout<< "Destructing" << std::endl;
     }
 
 public:
@@ -40,7 +40,7 @@ class Parent : public Human
 public:
     Parent (std::string n, int a, int s) : Human (n, a, s)
     {
-        std::cout<< "Parent constructed\n";
+        std::cout<< "Parent constructed" << std::endl;
     }
 
     void printChild(){
@@ -48,7 +48,7 @@ public:
         {
             std::cout << children[i] << ", ";
         }
-        std::cout << "\n";
+        std::cout << std::endl;
     }
 
     /////////////
@@ -77,22 +77,26 @@ class Child : public Human
 public:
     Child (std::string n, int a, int s, std::string momName, std::string dadName) : Human (n, a, s), allowance (0)
     {
-        std::cout << "Child is constructed\n";
+        std::cout << "Child is constructed" << std::endl;
     }
 
     int getAllowence () const
     {
-        std::cout << "The allowance is $ " << allowance << "\n";
+        std::cout << "The allowance is $ " << allowance << std::endl;
     }
 
     void printParent()
     {
-        std::cout<< "Mother: \n"<< momName << "Father: " << dadName << "\n";
+        std::cout<< "Mother: "<< std::endl << momName << "Father: " << dadName << std::endl;
     }
 
 };
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    Parent H ("Homer", 36, 'M');
+    Parent M ("Marge", 34, 'F');
+    Child ("Lisa", 12, 'F', "Marge", "Homer");
+    Child ("Bart", 10, 'M', "Marge", "Homer");
+    Child ("Maggie", 3, 'F', "Marge", "Homer");
+
 }
