@@ -33,7 +33,7 @@ public:
 
 class Parent : public Human
 {
-    std::vector <std::string> children;
+    //std::vector <std::string> children;
 
     Parent ();
 
@@ -43,6 +43,7 @@ public:
         std::cout<< "Parent constructed" << std::endl;
     }
 
+    /*
     void printChild(){
         for (int i  = 0; i < children.size(); i++)
         {
@@ -51,7 +52,7 @@ public:
         std::cout << std::endl;
     }
 
-    /////////////
+
     void setChild(&Child name){
         for (int a = 0; a < 3; a++)
         {
@@ -64,6 +65,7 @@ public:
     {
 
     }
+     */
 
 };
 
